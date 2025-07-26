@@ -60,8 +60,14 @@ MIDDLEWARE = [
 
 
 
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5173",  # Your React app URL
+# ]
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Your React app URL
+    "http://localhost:5173",     # for React dev
+    "https://www.senvotex.com",  # your frontend domain
+    "https://senvotex.com",
 ]
 
 
