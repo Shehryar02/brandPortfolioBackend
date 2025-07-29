@@ -97,29 +97,20 @@ WSGI_APPLICATION = 'brandPortfolioBackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# import dj_database_url
-
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default='postgresql://senvotex:m7pEtYzdivPmd26oB0YpimeDWjF41P8S@dpg-d229ssndiees73d7hrpg-a.oregon-postgres.render.com/senvotex',
-#         conn_max_age=600
-#     )
-# }
-
-import dj_database_url
-import os
-
-import dj_database_url
 DATABASES = {
-    'default': dj_database_url.config(default='postgresql://senvotex:m7pEtYzdivPmd26oB0YpimeDWjF41P8S@dpg-d229ssndiees73d7hrpg-a/senvotex')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+
+
+# import os
+# import dj_database_url
+# DATABASES = {
+#     'default': dj_database_url.config(default='postgresql://senvotex:m7pEtYzdivPmd26oB0YpimeDWjF41P8S@dpg-d229ssndiees73d7hrpg-a/senvotex')
+# }
 
 
 
