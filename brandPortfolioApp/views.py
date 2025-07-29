@@ -21,14 +21,19 @@ class ContactMessageViewSet(viewsets.ModelViewSet):
         # Admin Notification
         admin_subject = "Message via Contact - Senvotex"
         admin_body = f"""
-Name: {instance.first_name} {instance.last_name}
-Email: {instance.email}
-Phone: {instance.phone}
-Subject: {instance.subject}
+                        New Contact Form Submission
 
-Message:
-{instance.message}
-"""
+                        Name: {instance.first_name} {instance.last_name}
+                        Email Address: {instance.email}
+                        Phone Number: {instance.phone}
+                        Subject: {instance.subject}
+
+                        Message:
+                        {instance.message}
+
+                        This message was sent from your website's contact form.
+                        """
+
         admin_email = EmailMessage(
             subject=admin_subject,
             body=admin_body,
@@ -51,7 +56,7 @@ Message: {instance.message}
 
 Best regards,  
 Team Senvotex  
-senvotex@gmail.com
+digital@senvotex.com
 """
         user_email = EmailMessage(
             subject=user_subject,
